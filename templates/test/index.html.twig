@@ -3,6 +3,12 @@
 {% block title %}Hello Test2Controller!{% endblock %}
 
 {% block body %}
+
+{# fonction dump #}
+{# <pre>
+    {{dump(list)}}
+</pre> #}
+
 <table>
     <thead>
         <tr>
@@ -21,6 +27,11 @@
             {% endfor %}
     </tbody>
 </table>
+
+<hr>
+
+<img src="{{ asset('img/avatar-garçon.jpg') }}" alt="">
+
 {% endblock %}
 
  {% block header %}Autre Header{% endblock %}
