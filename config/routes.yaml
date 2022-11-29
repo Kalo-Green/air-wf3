@@ -6,5 +6,31 @@ home:
     path: /
     controller: App\Controller\HomeController::accueil
 
+# produit:
+#     # path: /produit/{id}
+
+#     # ?0 remplace defaults : id: 0 => abrévation
+#     path: /produit/{id<\d{1,3}>?0}
+#     controller: App\Controller\ProduitController::affiche
+    # defaults:
+    #     id: 0
+    # requirements:
+        # Expression régulière = '\d{1,2}'
+        # id: '\d{1,3}'
+    # methods: ['POST']
+    # schemes: ['https']
+    # host: api.mondomaine.com
+
+# produit-by-slug:
+#     path: /produit/{slug}
+#     controller: App\Controller\ProduitController::afficheBySlug
+#     requirements:
+#         slug: '[a-z]*'
+
+# inventaire:
+#     path: /produit/inventaire
+#     controller: App\Controller\ProduitController::affiche
+
+
 
 
