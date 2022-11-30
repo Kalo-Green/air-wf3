@@ -19,6 +19,10 @@ class Aeroport
     #[ORM\Column]
     private ?int $nb_pistes = null;
 
+    #[ORM\ManyToOne(inversedBy: 'aeroports')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Ville $ville = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -44,6 +48,18 @@ class Aeroport
     public function setNbPistes(int $nb_pistes): self
     {
         $this->nb_pistes = $nb_pistes;
+
+        return $this;
+    }
+
+    public function getVille(): ?Ville
+    {
+        return $this->ville;
+    }
+
+    public function setVille(?Ville $ville): self
+    {
+        $this->ville = $ville;
 
         return $this;
     }
