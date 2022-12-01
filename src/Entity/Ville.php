@@ -21,6 +21,9 @@ class Ville
     #[ORM\Column(length: 2)]
     private ?string $departement = null;
 
+    #[ORM\Column]
+    private ?int $population = null;
+
     #[ORM\OneToMany(mappedBy: 'ville', targetEntity: Aeroport::class)]
     private Collection $aeroports;
 
@@ -54,6 +57,18 @@ class Ville
     public function setDepartement(string $departement): self
     {
         $this->departement = $departement;
+
+        return $this;
+    }
+
+    public function getPopulation(): ?int
+    {
+        return $this->population;
+    }
+
+    public function setPopulation(int $population): self
+    {
+        $this->population = $population;
 
         return $this;
     }
