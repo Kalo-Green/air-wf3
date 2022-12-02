@@ -19,6 +19,10 @@
                 <td>{{ company.sigle }}</td>
                 <td>{{ company.employes }}</td>
                 <td><a href="{{path('show_company',{'id': company.id})}}" class="btn btn-primary">Voir</a></td>
+                <td><a href="{{path('modify_company',{'id': company.id})}}" class="btn btn-warning">Modifier</a></td>
+                <td><a href="{{path('modify_company',{'id': company.id})}}" class="btn btn-danger">Suppression</a></td>
+
+
             </tr>
         {% endfor %}
     </table>

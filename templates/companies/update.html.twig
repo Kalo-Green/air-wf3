@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Nouvelle compagnie{% endblock %}
+{% block title %}Upgate compagnie{% endblock %}
 
 {% block body %}
 
-<h1>Nouvelle compagnie</h1>
+<h1>Modification d'une compagnie</h1>
 
 {# {{ form(formulaire)}}  Intégralité du formulaire #}
 
@@ -25,5 +25,8 @@
 
 {% include "companies/form.html.twig" %}
 
+<div class="col-3">
+        <a href="{{path('app_companies')}}" class="btn btn-primary">Retour à la liste</a>
+    </div>
 
 {% endblock %}
