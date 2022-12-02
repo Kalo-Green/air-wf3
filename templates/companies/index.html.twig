@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CompaniesController!{% endblock %}
+
+{% block body %}
+    <h1>Compagnies</h1>
+    <table class="table">
+        <thead>
+            <th>#</th>
+            <th>Nom</th>
+            <th>Sigle</th>
+            <th>Employés</th>
+            <th>Actions</th>
+        </thead>
+        {% for company in companies %}
+            <tr>
+                <td>{{ company.id }}</td>
+                <td>{{ company.nom }}</td>
+                <td>{{ company.sigle }}</td>
+                <td>{{ company.employes }}</td>
+                <td><a href="{{path('show_company',{'id': company.id})}}" class="btn btn-primary">Voir</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <a href="{{ path('add_company') }}" class="btn btn-primary mt-3">Ajouter une compagnie</a>
+
+
+{% endblock %}

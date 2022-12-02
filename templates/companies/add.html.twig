@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvelle compagnie{% endblock %}
+
+{% block body %}
+
+<h1>Nouvelle compagnie</h1>
+
+{{ form_start(formulaire)}}
+    {{ form_row(formulaire.nom)}}
+    {{ form_row(formulaire.nom)}}
+    {{ form_row(formulaire.nom)}}
+
+
+    <button class="btn btn-primay">Valider</button>
+
+{% endblock %}
